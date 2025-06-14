@@ -521,18 +521,17 @@ def main():
             
             vendor_names = [vendor for vendor, _ in sorted_vendors]
             total_qtys = [data['total_qty'] for _, data in sorted_vendors]
-            total_rms = [data['total_rm'] for _, data in sorted_vendors]
             
             fig_vendor = go.Figure()
             fig_vendor.add_trace(go.Bar(name='Total QTY', x=vendor_names, y=total_qtys, marker_color='#1f77b4'))
-            fig_vendor.add_trace(go.Bar(name='Total RM', x=vendor_names, y=total_rms, marker_color='#ff7f0e'))
             
             fig_vendor.update_layout(
-                title="Top 10 Vendors - QTY vs RM Comparison",
+                title="Top 10 Vendors by Total QTY",
                 xaxis_title="Vendor",
                 yaxis_title="Quantity",
-                barmode='group'
+                showlegend=False  # Hide legend since there's only one series
             )
+            
             st.plotly_chart(fig_vendor, use_container_width=True)
         
         if show_excess:
