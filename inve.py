@@ -316,7 +316,7 @@ def main():
     analyzer = InventoryAnalyzer()
     
     # Header
-    st.title(📊 Inventory Analysis with Vendor Filter)
+    st.title("📊 Inventory Analysis with Vendor Filter")
     
     st.markdown(
         "<p style='font-size:18px; font-style:italic; margin-top:-10px; text-align:left;'>"
