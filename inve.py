@@ -316,7 +316,8 @@ def main():
     analyzer = InventoryAnalyzer()
     
     # Header
-    st.markdown('<h1 class="main-header">📊 Inventory Analysis with Vendor Filter</h1>', unsafe_allow_html=True)
+    st.title(📊 Inventory Analysis with Vendor Filter)
+    
     st.markdown(
         "<p style='font-size:18px; font-style:italic; margin-top:-10px; text-align:left;'>"
         "Designed and Developed by Agilomatrix</p>",
